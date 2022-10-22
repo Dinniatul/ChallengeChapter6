@@ -2,9 +2,9 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Car Management API Binar Academy",
-    "description": "A REST API that can be used to manage car data with the authentication feature.",
+    "description": " Project Car Management uses the authentication feature to perform the action",
     "contact": {
-      "email": "nandajelubis@gmail.com"
+      "email": "kundinnii29@gmail.com"
     },
     "version": "1.0.1"
   },
@@ -30,9 +30,7 @@
   "paths": {
     "/api/v1/cars": {
       "get": {
-        "tags": [
-          "car"
-        ],
+        "tags": ["car"],
         "summary": "Retrive the list of cars",
         "description": "To retrive the list of cars",
         "responses": {
@@ -96,9 +94,7 @@
         }
       },
       "post": {
-        "tags": [
-          "car"
-        ],
+        "tags": ["car"],
         "summary": "Add a new car",
         "description": "Add a new car",
         "operationId": "addCar",
@@ -174,9 +170,7 @@
     },
     "/api/v1/cars/{carId}": {
       "put": {
-        "tags": [
-          "car"
-        ],
+        "tags": ["car"],
         "summary": "Update car by ID",
         "description": "Update car by ID",
         "operationId": "updateCar",
@@ -279,9 +273,7 @@
         }
       },
       "get": {
-        "tags": [
-          "car"
-        ],
+        "tags": ["car"],
         "summary": "Find car by id",
         "description": "Find car by id",
         "parameters": [
@@ -339,9 +331,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "car"
-        ],
+        "tags": ["car"],
         "summary": "Delete car by id",
         "description": "Delete car by id",
         "parameters": [
@@ -414,9 +404,7 @@
     },
     "/api/v1/currentUser": {
       "get": {
-        "tags": [
-          "user"
-        ],
+        "tags": ["user"],
         "summary": "Get current authorized user",
         "description": "Get current authorized user",
         "responses": {
@@ -460,9 +448,7 @@
     },
     "/api/v1/login": {
       "post": {
-        "tags": [
-          "authentication"
-        ],
+        "tags": ["authentication"],
         "summary": "Login",
         "requestBody": {
           "description": "Login with email and password",
@@ -550,9 +536,7 @@
     },
     "/api/v1/registerAdmin": {
       "post": {
-        "tags": [
-          "authentication"
-        ],
+        "tags": ["authentication"],
         "summary": "Register admin",
         "requestBody": {
           "description": "Register admin with email and password",
@@ -605,9 +589,7 @@
     },
     "/api/v1/registerMember": {
       "post": {
-        "tags": [
-          "authentication"
-        ],
+        "tags": ["authentication"],
         "summary": "Register member",
         "requestBody": {
           "description": "Register admin with email and password",
@@ -662,12 +644,7 @@
   "components": {
     "schemas": {
       "CarReqBody": {
-        "required": [
-          "name",
-          "price",
-          "type",
-          "image"
-        ],
+        "required": ["name", "price", "type", "image"],
         "type": "object",
         "properties": {
           "name": {
