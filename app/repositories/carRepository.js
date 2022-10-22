@@ -17,15 +17,15 @@ module.exports = {
     return Mobil.destroy(id);
   },
 
-  find(id) {
-    return Mobil.findByPk(id);
+  find(condition) {
+    return Mobil.findOne({ where: condition });
   },
 
-  findAll() {
-    return Mobil.findAll();
+  findAll(condition) {
+    return Mobil.findAll({ where: condition });
   },
 
-  getTotalCars() {
-    return Mobil.count();
+  getTotalCars(condition) {
+    return Mobil.count({ where: condition });
   },
 };

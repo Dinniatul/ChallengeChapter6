@@ -125,6 +125,39 @@ module.exports = {
     }
   },
 
+  async authorizeSuperAdmin(token) {
+    try {
+      const payload = verifyToken(token);
+
+      const id = payload?.id;
+      const role = payload?.role;
+      if (role != "superAdmin") {
+        return false;
+      }
+      const user = await userRepository.findUser(id);
+      return user;
+    } catch (err) {
+      throw err;
+    }
+  },
+
+  async authorizeAdmin(token) {
+    try {
+      const payload = verifyToken(token);
+
+      const id = payload?.id;
+      const role = payload?.role;
+      if (role == "superAdmin" || role == "admin") {
+        const user = await userRepository.findUser(id);
+        return user;
+      }
+
+      return false;
+    } catch (err) {
+      throw err;
+    }
+  },
+
   async list() {
     try {
       const user = await userRepository.findAll();

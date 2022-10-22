@@ -13,10 +13,10 @@ module.exports = {
     return carRepository.delete(id);
   },
 
-  async list() {
+  async list(isDelete) {
     try {
-      const cars = await carRepository.findAll();
-      const carCount = await carRepository.getTotalCars();
+      const cars = await carRepository.findAll({ isDelete });
+      const carCount = await carRepository.getTotalCars({ isDelete: false });
 
       return {
         data: cars,
