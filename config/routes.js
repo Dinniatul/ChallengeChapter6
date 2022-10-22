@@ -1,7 +1,7 @@
 const express = require("express");
 const controllers = require("../app/controllers");
 const swaggerUi = require("swagger-ui-express");
-const swaggerDocument = require("../openapi.json");
+const swaggerDocument = require("../swagger.json");
 
 const apiRouter = express.Router();
 apiRouter.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
